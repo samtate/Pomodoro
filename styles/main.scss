@@ -1,5 +1,73 @@
-$heading-color: hotpink;
+$background-colour: #ff5050;
+$button-colour: #88C057;
 
-h1 {
-	color: $heading-color;
+@keyframes bounce {
+	0%		{transform: translateY(0) scale(1)}
+	50% 	{transform: translateY(2px) scale(1.05)}
+	100% 	{transform: translateY(0) scale(1)}
+	}
+
+body {
+	background-color: $background-colour;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	min-width: 300px;
+	height: 100vh;
+	.tomatocontainer {
+		margin: 0 auto;
+		width: 60%;
+		max-width: 350px;
+		#leaves {
+			transform-origin: center;
+			&.animated {
+				animation: bounce 1s infinite;
+			}
+		}
+	}
+	.spinners {
+		width: 60%;
+		min-width: 300px;
+		display: flex;
+		margin: 0 auto;
+		.spinner {
+			font-size: 30px;
+			color: #fff;
+			font-family: 'Roboto';
+			text-align: center;
+			margin: 0 auto;
+		}
+		.break {
+			margin-right: 10px;
+		}
+	}
+	#startreset {
+		width: 150px;
+		height: 40px;
+		background-color: $button-colour;
+		border: 1px #4a6f2a solid;
+		border-radius: 25px;
+		margin: 0 auto;
+		font-size: 20px;
+		color: #fff;
+	}
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 7px 7px 0;
+  display: inline-block;
+  padding: 7px;
+  &.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+
+  &.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
 }
