@@ -1,0 +1,13 @@
+{
+	"name": "Pomodoro",
+	"exportDir": "dist",
+	"minify": true,
+	"compile": true,
+	"exclusions": [
+		{
+			"path": "node_modules",
+			"action": "exclude",
+			"type": "dir"
+		}
+	]
+}
