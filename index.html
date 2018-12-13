@@ -5,7 +5,7 @@
 		<title></title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
-
+		<link rel="manifest" href="manifest.json">
 		<link rel="stylesheet" href="styles/main.css">
 	</head>
 	<body>
@@ -42,20 +42,40 @@
 					</g>
 				</svg>
 			</div>
-			<div class="spinners">
-				<div class="spinner" id="break">
-					<div class="arrow up" id="breakup"></div><br />
-					<span id="breakspan">5</span><br /> minutes<br />
-					<div class="arrow down" id="breakdown"></div>
-				</div>
-
+			<div id="spinners">
 				<div class="spinner" id="timer">
 					<div class="arrow up" id="timerup"></div><br />
 					<span id="timerspan">25</span><br /> minutes<br />
-					<div class="arrow down" id="timerdown"></div>
+					<div class="arrow down" id="timerdown"></div><br />
+					<span class="label">WORK</span>
+				</div>
+
+				<div class="spinner" id="break">
+					<div class="arrow up" id="breakup"></div><br />
+					<span id="breakspan">5</span><br /> minutes<br />
+					<div class="arrow down" id="breakdown"></div><br />
+					<span class="label">BREAK</span>
 				</div>
 			</div>
+			<div id="clock">
+				<span></span><br />
+				<span class="label" id="clocklabel">WORK</span><br />
+				<button id="playpause">Pause</button>
+			</div>
 			<button id="startreset">Start</button>
+		</div>
+
+		<div id="notificationModal" class="modal">
+				<span>The app is much better with notifications, please enable them in your browser.</span>
+				<img src="../img/close.png" class="modal-close" id="notification-modal-close" />
+		</div>
+
+		<div id="startBreakModal" class="modal">
+				<span>Start your break!</span>
+		</div>
+
+		<div id="workModal" class="modal">
+				<span>Get to work!</span>
 		</div>
 
 		<script src="scripts/main.js"></script>
