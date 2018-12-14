@@ -65,9 +65,15 @@
 			<button id="startreset">Start</button>
 		</div>
 
+		<div id="PWAModal" class="modal">
+				<span>You can add this app to your homescreen and it will work offline!</span>
+				<button id="PWAButton">Add</button>
+				<img src="img/close.png" class="modal-close" id="PWA-modal-close" />
+		</div>
+
 		<div id="notificationModal" class="modal">
 				<span>The app is much better with notifications, please enable them in your browser.</span>
-				<img src="../img/close.png" class="modal-close" id="notification-modal-close" />
+				<img src="img/close.png" class="modal-close" id="notification-modal-close" />
 		</div>
 
 		<div id="startBreakModal" class="modal">
@@ -79,5 +85,12 @@
 		</div>
 
 		<script src="scripts/main.js"></script>
+		<script>
+			if('serviceWorker' in navigator) {
+				navigator.serviceWorker
+				.register('sw.js')
+				.then(function() { console.log("Service Worker Registered"); });
+			}
+		</script>
 	</body>
 </html>
